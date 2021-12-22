@@ -17,13 +17,13 @@ from writing.models import Writing
 class DbUploader:
     def __init__(self):
         self.vo = ValueObject()
-        self.write_path = '../machine/ver3'
-        self.draw_path = '../img'
+        self.write_path = 'machine/ver3'
+        self.draw_path = 'img'
 
     def insert_data(self):
-        self.insert_userlog(3, '1')
+        self.insert_userlog('1')
 
-    def insert_userlog(self, achieve_log, user_id):
+    def insert_userlog(self, user_id):
         today = datetime.now().date()
         all_today = list(UserLog.objects.filter(log_date__year=today.year,
                                                 log_date__month=today.month,
@@ -44,13 +44,18 @@ class DbUploader:
         # writing = f'오늘은 {log.location} 갔다!' + writing if random.randint(0, 1) == 0 else writing
         print(f"writing : {writing}")
         print(f"drawing : {drawing}")
-        # Diary.objects.create(weather=log.weather,
-        #                      location=log.location,
-        #                      drawing=drawing,
-        #                      contents=writing,
-        #                      memo='사용자가 작성하는 메모',
-        #                      log_id=achieve_log,      # 이거 어떡하지
-        #                      user_id=user_id)
+        print("*"*100)
+        print(all_today)
+        print(f'all_today weather :: {str(all_today[0]["weather"])}')
+        print(f'all_today location :: {str(all_today[0]["location"])}')
+        print(f'all_today id :: {[int(i["id"]) for i in all_today]}')
+        Diary.objects.create(weather=str(all_today[0]["weather"]),
+                             location=str(all_today[0]["location"]),
+                             drawing=drawing,
+                             contents=writing,
+                             memo='사용자가 작성하는 메모',
+                             log_id=[int(i["id"]) for i in all_today],      # 이거 어떡하지
+                             user_id=int(user_id))
         print('Diary DATA UPLOADED SUCCESSFULY!')
 
 

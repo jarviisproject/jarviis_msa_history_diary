@@ -10,6 +10,7 @@ from rest_framework.parsers import JSONParser
 # Create your views here.
 from routine.models import Routine
 # from routine.models_process import RoutineMaker
+from routine.models_process import RoutineMaker
 from routine.serializers import RoutineSerializer
 
 
@@ -32,17 +33,19 @@ def find_all(request):
 @api_view(['GET'])
 @parser_classes([JSONParser])
 def upload(request):
-    Routine.objects.create(log_repeat=0,
-                           priority=0,
-                           grade=0,
-                           contents="열심히 파이썬 공부",
-                           location='비트캠프',
-                           cron=["0", "0", "10", "0", "0", "fri"],
-                           days=["fri", "sun"],
-                           hours=["10"],
-                           log_id=[],
-                           user_id=1
-                           )
+    # Routine.objects.create(log_repeat=0,
+    #                        priority=0,
+    #                        grade=0,
+    #                        contents="열심히 파이썬 공부",
+    #                        location='비트캠프',
+    #                        cron=["0", "0", "10", "0", "0", "fri"],
+    #                        days=["fri", "sun"],
+    #                        hours=["10"],
+    #                        log_id=[],
+    #                        user_id=1
+    #                        )
+    routine = RoutineMaker()
+    routine.process(1)
     return JsonResponse({'Routine Upload': 'SUCCESS'})
 
 
@@ -67,3 +70,12 @@ def today_top10(request, user_id):
     result = []
     [result.append(i) for i in routines if i['cron'][5].find(today) > -1]
     return JsonResponse(data=result[0:10], safe=False)
+
+
+@api_view(['GET', 'POST'])
+@parser_classes([JSONParser])
+def reject_routine(request, id):
+    routine = Routine.objects.get(id=id)
+    routine.priority = routine.priority - 10
+    routine.save()
+    return JsonResponse({'result':f'<{routine.contents}> 우선순위 감소'})

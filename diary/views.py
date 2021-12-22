@@ -22,10 +22,12 @@ def process(request):
 def find(request, user_id, year, month, day):
     print("********** find START **********")
     print(f'date : {year}-{month}-{day}')
-    diary = Diary.objects.filter(user_id=user_id, diary_date__year= year, diary_date__month=month, diary_date__day=day)
-    serializer = DiarySerializer(diary, many=True)
-    print(serializer.data)
-    return JsonResponse(data=serializer.data, safe=False)
+    diary = Diary.objects.filter(user_id=int(user_id), diary_date__year= year, diary_date__month=month, diary_date__day=day).values()[0]
+    print(diary)
+    serializer = DiarySerializer(diary).data
+    print("********** serializer **********")
+    print(serializer)
+    return JsonResponse(data=serializer, safe=False)
 
 
 @api_view(['PUT'])
@@ -51,6 +53,6 @@ def modify(request):
 @parser_classes([JSONParser])
 def upload(request):
     print("********** NEW diary upload START **********")
-    DbUploader.insert_data()
+    DbUploader().insert_data()
     return JsonResponse({'NEW diary': 'SUCCESS'})
 

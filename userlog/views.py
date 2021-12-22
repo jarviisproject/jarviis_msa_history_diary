@@ -51,20 +51,32 @@ def modify(request):
     print(edit)
     log = UserLog.objects.get(pk=edit['id'])
     db = UserLog.objects.all().filter(id=edit['id']).values()[0]
-    # print(f' 변경 전 : {db}')
-    db['location'] = edit['location'] if edit['location'] != "" else db['location']
-    x, y, address = Location().getAddress(db['location']) if db['location'] != "" else "","",""
+    db["log_date"] = str(db["log_date"])
+    db['location'] = str(db['location'])
+    x, y, address = Location().getAddress(db['location'])
     db['address'] = address
     db['x'] = x
     db['y'] = y
-    db['log_date'] = edit['log_date'] if edit['log_date'] != "" else db['log_date']
-    db['weather'] = edit['weather'] if edit['weather'] != "" else db['weather']
-    db['log_type'] = edit['log_type'] if edit['log_type'] != "" else db['log_type']
-    db['contents'] = edit['contents'] if edit['contents'] != "" else db['contents']
+    print(f" edit.keys() :: {edit.keys()}")
+    print(f' 변경 전 : {db}')
+    for i in edit.keys():
+        print(f"{i}")
+        db[f"{i}"] = edit[f"{i}"]
+    # db['location'] = edit['location'] if edit['location'] != "" else db['location']
+    # x, y, address = Location().getAddress(db['location'])
+    # db['address'] = address
+    # db['x'] = x
+    # db['y'] = y
+    # db['log_date'] = edit['log_date'] if edit['log_date'] != "" else db['log_date']
+    # db['weather'] = edit['weather'] if edit['weather'] != "" else db['weather']
+    # db['log_type'] = edit['log_type'] if edit['log_type'] != "" else db['log_type']
+    # db['contents'] = edit['contents'] if edit['contents'] != "" else db['contents']
     # db['item'] = edit['item']
-    # print(f' 변경 후 : {db}')
+    print(f' 변경 후 : {db}')
     serializer = UserLogSerializer(data=db)
     # print(f'db type : {type(db)}  // serializer type : {type(serializer)}')
+    print(db)
+    print(serializer)
     if serializer.is_valid():
         serializer.update(log, db)
         return JsonResponse(data=serializer.data, safe=False)

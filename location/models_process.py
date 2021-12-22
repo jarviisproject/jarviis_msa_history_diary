@@ -35,12 +35,12 @@ class Location(object):
             # print(address)
             return x, y, address
         except IndexError:  # match값이 없을때
-            print('match값이 없을때')
-            x, y, address = '0', '0', '0'
+            print('getAddress :: match값이 없을때')
+            x, y, address = '장소 없음', '장소 없음', '장소 없음'
             return x, y, address
         except TypeError:  # match값이 2개이상일때
             print('match값이 2개이상일때')
-            x, y, address = '1', '1', '1'
+            x, y, address = '장소 없음', '장소 없음', '장소 없음'
             return x, y, address
 
     def getLatLng(self, addr):

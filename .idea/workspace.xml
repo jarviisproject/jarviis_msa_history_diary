@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d18ed475-41a4-40c0-9752-912fb7495459" name="Changes" comment="" />
+    <list default="true" id="d18ed475-41a4-40c0-9752-912fb7495459" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/models_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/models_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flower/models_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/flower/models_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/test0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/test1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/test2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/location/models_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/location/models_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routine/models_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine/models_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userlog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userlog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userlog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userlog/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,7 +27,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="22MeUEt7yeQLSVrsrN0v2JTiUjO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -39,7 +55,7 @@
       <recent name="D:\project_combine\backend\writing\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.models_data">
+  <component name="RunManager" selected="Python.models_process">
     <configuration name="models_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -54,6 +70,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/diary/models_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="models_process" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/routine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/routine/models_process.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -109,6 +147,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.models_process" />
         <item itemvalue="Python.models_data" />
         <item itemvalue="Python.models_train" />
       </list>
@@ -123,7 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639651896669</updated>
       <workItem from="1639651897800" duration="16941000" />
-      <workItem from="1639980109911" duration="20441000" />
+      <workItem from="1639980109911" duration="33835000" />
     </task>
     <servers />
   </component>
@@ -145,5 +184,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/backend$models_data.coverage" NAME="models_data Coverage Results" MODIFIED="1640054914064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary" />
     <SUITE FILE_PATH="coverage/backend$models_train.coverage" NAME="models_train Coverage Results" MODIFIED="1640050971389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/writing" />
+    <SUITE FILE_PATH="coverage/backend$models_process.coverage" NAME="models_process Coverage Results" MODIFIED="1640169817795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/routine" />
   </component>
 </project>

@@ -9,14 +9,15 @@ from userlog.models import UserLog as userlog
 
 
 class DiarySerializer(serializers.Serializer):
+    id = serializers.IntegerField()
     diary_date = serializers.CharField()
     weather = serializers.CharField()
     location = serializers.CharField()
     drawing = serializers.CharField()
     contents = serializers.CharField()
     memo = serializers.CharField()
-    log = serializers.CharField()
-    user_id = serializers.CharField()
+    log_id = serializers.CharField()
+    user_id = serializers.IntegerField()
 
     class Meta:
         model = diary

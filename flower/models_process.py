@@ -46,7 +46,7 @@ class FlowerMaker:
         flower_log = flower.log_id
         flower.log_id = list(set(flower_log))
         flower.save()
-        flower.step = flower.step + 1 if flower.step < 15 else flower.step
+        flower.step = flower.step + 1 if flower.step < 27 else flower.step
         flower.save()
         if flower.step < 3:
             flower.grade = 0
@@ -54,6 +54,10 @@ class FlowerMaker:
             flower.grade = 1
         elif flower.step < 10:
             flower.grade = 2
-        elif flower.step < 16:
+        elif flower.step < 15:
             flower.grade = 3
+        elif flower.step < 21:
+            flower.grade = 4
+        elif flower.step < 28:
+            flower.grade = 5
         flower.save()

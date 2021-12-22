@@ -162,5 +162,3 @@ class RoutineMaker:
                                        )
                 # new flower
                 FlowerMaker().create_flower(contents, log_id, user_id)
-
-

@@ -6,13 +6,13 @@ from django.db import models
 
 
 class UserLog(models.Model):
-    location = models.TextField()
-    address = models.TextField()
-    x = models.TextField()
-    y = models.TextField()
+    location = models.TextField(null=True)
+    address = models.TextField(null=True)
+    x = models.TextField(null=True)
+    y = models.TextField(null=True)
     log_date = models.DateTimeField(default=datetime.now())
-    weather = models.TextField()
-    log_type = models.TextField()
+    weather = models.TextField(null=True)
+    log_type = models.TextField(null=True)
     contents = models.TextField()
     # item = models.TextField()
     user_id = models.IntegerField()
