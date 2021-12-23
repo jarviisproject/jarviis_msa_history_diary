@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d18ed475-41a4-40c0-9752-912fb7495459" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diary/models_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/models_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diary/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flower/models_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/flower/models_process.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/test0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test0.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/test1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test1.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/test2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location/models_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/location/models_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routine/models_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine/models_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userlog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userlog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userlog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userlog/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +151,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639651896669</updated>
       <workItem from="1639651897800" duration="16941000" />
-      <workItem from="1639980109911" duration="33835000" />
+      <workItem from="1639980109911" duration="36473000" />
     </task>
     <servers />
   </component>
