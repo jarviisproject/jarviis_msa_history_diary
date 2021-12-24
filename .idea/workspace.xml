@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d18ed475-41a4-40c0-9752-912fb7495459" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flower/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flower/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/location/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/location/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/models_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/models_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flower/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/flower/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/test0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/test1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/test2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/img/test2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routine/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userlog/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/userlog/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userlog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userlog/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639651896669</updated>
       <workItem from="1639651897800" duration="16941000" />
-      <workItem from="1639980109911" duration="41391000" />
+      <workItem from="1639980109911" duration="54754000" />
     </task>
     <servers />
   </component>

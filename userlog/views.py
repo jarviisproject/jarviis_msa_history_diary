@@ -52,7 +52,6 @@ def modify(request):
     log = UserLog.objects.get(pk=edit['id'])
     db = UserLog.objects.all().filter(id=edit['id']).values()[0]
     db["log_date"] = str(db["log_date"])
-    db['location'] = str(db['location'])
     x, y, address = Location().getAddress(db['location'])
     db['address'] = address
     db['x'] = x
@@ -62,6 +61,7 @@ def modify(request):
     for i in edit.keys():
         print(f"{i}")
         db[f"{i}"] = edit[f"{i}"]
+    db['location'] = str(db['location'])
     # db['location'] = edit['location'] if edit['location'] != "" else db['location']
     # x, y, address = Location().getAddress(db['location'])
     # db['address'] = address
@@ -80,6 +80,7 @@ def modify(request):
     if serializer.is_valid():
         serializer.update(log, db)
         return JsonResponse(data=serializer.data, safe=False)
+    print(f"ERROR :: {serializer.errors}")
     return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -184,6 +185,7 @@ def list(request):
     day = date[8:10]
     print(f'date : {year}-{month}-{day}')
     userlog = UserLog.objects.filter(log_date__year= year, log_date__month=month, log_date__day=day, user_id=user_id)
+    print(userlog)
     serializer = UserLogSerializer(userlog, many=True)
     print(serializer.data)
     return JsonResponse(data = serializer.data, safe=False)

@@ -20,10 +20,28 @@ class DbUploader:
         self.write_path = 'machine/ver3'
         self.draw_path = 'img'
 
-    def insert_data(self):
-        self.insert_userlog('1')
+    def insert_data(self, user_id):
+        all_today, drawing, writing, user_id = self.make_diary(user_id)
+        Diary.objects.create(weather=str(all_today[0]["weather"]),
+                             location=str(all_today[0]["location"]),
+                             drawing=drawing,
+                             contents=writing,
+                             memo='사용자가 작성하는 메모',
+                             log_id=[int(i["id"]) for i in all_today],  # 이거 어떡하지
+                             user_id=int(user_id))
+        print('Diary DATA UPLOADED SUCCESSFULY!')
 
-    def insert_userlog(self, user_id):
+    def modify_data(self, user_id):
+        all_today, drawing, writing, user_id = self.make_diary(user_id)
+        return {"weather": str(all_today[0]["weather"]),
+                "location": str(all_today[0]["location"]),
+                "drawing": drawing,
+                "contents": writing,
+                "log_id": [int(i["id"]) for i in all_today]
+                }
+
+
+    def make_diary(self, user_id):
         today = datetime.now().date()
         all_today = list(UserLog.objects.filter(log_date__year=today.year,
                                                 log_date__month=today.month,
@@ -49,14 +67,8 @@ class DbUploader:
         print(f'all_today weather :: {str(all_today[0]["weather"])}')
         print(f'all_today location :: {str(all_today[0]["location"])}')
         print(f'all_today id :: {[int(i["id"]) for i in all_today]}')
-        Diary.objects.create(weather=str(all_today[0]["weather"]),
-                             location=str(all_today[0]["location"]),
-                             drawing=drawing,
-                             contents=writing,
-                             memo='사용자가 작성하는 메모',
-                             log_id=[int(i["id"]) for i in all_today],      # 이거 어떡하지
-                             user_id=int(user_id))
-        print('Diary DATA UPLOADED SUCCESSFULY!')
+        return all_today, drawing, writing, user_id
+
 
 
 if __name__ == '__main__':

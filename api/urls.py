@@ -21,7 +21,7 @@ from api.views import writeModuleStarted
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    url('', writeModuleStarted),
+    path('', writeModuleStarted),
     # path('api/hello', api.views.helloAPI),
     path('api/history', include('userlog.urls')),
     path('api/weather', include('weather.urls')),

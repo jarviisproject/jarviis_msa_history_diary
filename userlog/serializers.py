@@ -9,10 +9,10 @@ from userlog.models import UserLog as userlog
 
 class UserLogSerializer(serializers.Serializer):
     id = serializers.CharField()
-    location = serializers.CharField()
-    address = serializers.CharField()
-    x = serializers.CharField()
-    y = serializers.CharField()
+    location = serializers.CharField(allow_blank=True)
+    address = serializers.CharField(allow_blank=True)
+    x = serializers.CharField(allow_blank=True)
+    y = serializers.CharField(allow_blank=True)
     log_date = serializers.CharField()
     weather = serializers.CharField()
     log_type = serializers.CharField()

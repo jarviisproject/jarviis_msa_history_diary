@@ -18,10 +18,10 @@ class RoutineSerializer(serializers.Serializer):
     grade = serializers.CharField()
     contents = serializers.CharField()
     location = serializers.CharField()
-    cron = serializers.CharField()
-    days = serializers.CharField()
-    hours = serializers.CharField()
-    log_id = serializers.CharField()
+    cron = serializers.ListField(child=serializers.CharField())
+    days = serializers.ListField(child=serializers.CharField())
+    hours = serializers.ListField(child=serializers.CharField())
+    log_id = serializers.ListField(child=serializers.IntegerField())
     user_id = serializers.CharField()
 
     class Meta:

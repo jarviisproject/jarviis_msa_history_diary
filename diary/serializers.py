@@ -16,7 +16,8 @@ class DiarySerializer(serializers.Serializer):
     drawing = serializers.CharField()
     contents = serializers.CharField()
     memo = serializers.CharField()
-    log_id = serializers.CharField()
+    # log_id = serializers.CharField()
+    log_id = serializers.ListField(child=serializers.IntegerField())
     user_id = serializers.IntegerField()
 
     class Meta:

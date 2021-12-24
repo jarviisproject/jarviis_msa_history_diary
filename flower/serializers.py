@@ -16,8 +16,8 @@ class FlowerSerializer(serializers.Serializer):
     grade = serializers.CharField()
     step = serializers.CharField()
     color = serializers.CharField()
-    log_id = serializers.CharField()
-    event_id = serializers.CharField()
+    log_id = serializers.ListField(child=serializers.IntegerField())
+    event_id = serializers.ListField(child=serializers.IntegerField())
     user_id = serializers.CharField()
 
     class Meta:
